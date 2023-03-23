@@ -3,26 +3,28 @@ As part of becoming a front-end web developer, a coding assessment is often requ
 
 
 
-## User Story
+## Description
 
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+This Coding Quiz Challenge allows users to test their knowledge on Javascript by abswering a few multiple choice questions. 
+This is a timed quiz, which has the negative scoring system in place. For example, if an incorrect answer is chosen, then the time is reduced by 10 seconds. 
+At the end of the quiz, after clikcing on Submit, the user's score is displayed. 
+The user's score can be saved by inputting their initials.
 
-## Acceptance Criteria
-
-Create a code quiz that contains the following requirements:
-
-* A start button that when clicked a timer starts and the first question appears.
- 
+This coding quiz meets the following requirements: 
+  * A start button that when clicked a timer starts and the first question appears.
   * Questions contain buttons for each answer.
-  * 
   * When answer is clicked, the next question appears
-  * 
   * If the answer clicked was incorrect then subtract time from the clock
-
-* The quiz should end when all questions are answered or the timer reaches 0.
-
+  * The quiz should end when all questions are answered or the timer reaches 0.
   * When the game ends, it should display their score and give the user the ability to save their initials and their score
+
+
+## Screenshot
+
+## Link to Deployed application
+
+
+
+  ## License
+
+  MIT License
