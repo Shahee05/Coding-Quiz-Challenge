@@ -29,10 +29,9 @@ This coding quiz meets the following requirements:
 
 https://shahee05.github.io/Coding-Quiz-Challenge/
 
-
-  ## Project Status
-  Working with APIs - ongoing
-
-  ## License
+## License
 
   MIT License
+
+## Project Status
+  Working with APIs - ongoing
