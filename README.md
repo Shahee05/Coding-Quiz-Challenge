@@ -29,7 +29,7 @@ This coding quiz meets the following requirements:
 
 ## Screenshot
 
-<img src=/Users/shahee/Desktop/Bootcamp/week-6/Coding-Quiz-Challenge/assets/Screenshot.png>
+<img src="/Users/shahee/Desktop/Bootcamp/week-6/Coding-Quiz-Challenge/assets/Screenshot.png">
 
 
 ## Link to Deployed application
