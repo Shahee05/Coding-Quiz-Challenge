@@ -10,6 +10,8 @@ This is a timed quiz, which has the negative scoring system in place. For exampl
 At the end of the quiz, after clikcing on Submit, the user's score is displayed. 
 The user's score can be saved by inputting their initials.
 
+## Deployed Information
+
 This coding quiz meets the following requirements: 
   * A start button that when clicked a timer starts and the first question appears.
   * Questions contain buttons for each answer.
@@ -18,12 +20,18 @@ This coding quiz meets the following requirements:
   * The quiz should end when all questions are answered or the timer reaches 0.
   * When the game ends, it should display their score and give the user the ability to save their initials and their score
 
-
 ## Screenshot
+
+<img src=/Users/shahee/Desktop/Bootcamp/week-6/Coding-Quiz-Challenge/assets/Screenshot.png>
+
 
 ## Link to Deployed application
 
+https://shahee05.github.io/Coding-Quiz-Challenge/
 
+
+  ## Project Status
+  Working with APIs - ongoing
 
   ## License
 

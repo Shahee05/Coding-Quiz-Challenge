@@ -1,16 +1,17 @@
 body {
   font-family: Arial;
   font-size: 120%;
+  background-color: #c05c5c;
 }
 
 a {
-  color: #563d7c;
+  color: #bccd24;
   text-decoration: none;
   transition: color 0.1s;
 }
 
 a:hover {
-  color: #8570a5;
+  color: #b28a2c;
 }
 
 button {
@@ -85,4 +86,5 @@ li:nth-child(odd) {
   position: absolute;
   top: 10px;
   right: 10px;
+  color: rgb(50, 220, 17);
 }
