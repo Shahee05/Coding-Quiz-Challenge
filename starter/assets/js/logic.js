@@ -76,7 +76,7 @@ function countdown(value) {
     if (stopValue <= 0) {
         clearInterval(interval);
         newScreenTime("Oh no! You ran out of time!");
-        gameOver();
+        gameEnd();
     } else {
         newScreenTime(stopValue);
     }
@@ -159,22 +159,33 @@ function correctAnswer() {
     })
 }
 
+//more timer funtionality when going through the quiz game
+
+start.addEventListener("click", function (event) {
+    event.preventDefault();
+    newScreenTime(startTime);
+    interval = setInterval(countdownTimer, 1000);
+    startScreen.classList.add("hide");
+    screenQuestions.classList.remove("hide");
+    showNextQuestion();
+})
 
 
-// quiz layout
+
+//for questions to pop up on ater another
 function showNextQuestion() {
-    // end game once all questions have been answered
+
     if (questionNumber < choicesLength) {
         removeMessages();
 
-        //goes to the next question
         questionNumber += 1;
     
         var questionName = shuffledQuestions[questionNumber].questionList;
         questionsAnswer.textContent = questionName;
    
         var choice = shuffledQuestions[questionNumber];
-        // creates choices buttons and displays the choices on the webpage
+      
+        //allows questions and options to be displayed 
         console.log(questionNumber);
 
         shuffle(choice.multipleChoiceOptions).forEach(function (item) {
@@ -186,32 +197,23 @@ function showNextQuestion() {
         // runs function to check if correct answer was selected
         correctAnswer();
     } else {
-        gameOver();
+        gameEnd();
     }
 }
 
 
-function gameOver() {
+//end game quiz
+
+function gameEnd() {
     screenQuestions.classList.add("hide");
     endScreen.classList.remove("hide");
     finalScore.textContent = score;
 }
 
 
-start.addEventListener("click", function (event) {
-    event.preventDefault();
-    newScreenTime(startTime);
-    // decrease time by 1 every second
-    interval = setInterval(countdownTimer, 1000);
-    // hide the start screen
-    startScreen.classList.add("hide");
-    // removes the class hide from the question screen to display the question screen
-    screenQuestions.classList.remove("hide");
-    showNextQuestion();
-})
+// save initials -local storage
 
 submit.addEventListener("click", function (event) {
-    // if no initials entered score is not saved
     if (addInitials.value === "") {
         return;
     }
@@ -223,22 +225,22 @@ submit.addEventListener("click", function (event) {
     if (scoresString === null) {
         scores = [];
     } else {
-        // converts in local storage into an array with objects
+        // converts  into an array with objects
         scores = JSON.parse(scoresString);
     }
 
+    //stores initials for high scores
     var scoreObject = {
         initials: addInitials.value.toUpperCase(),
         score: score
     };
 
     scores.push(scoreObject);
-    // converts score inot string to be stored in local storage
+    // converts back to local storage
     localStorage.setItem("scores", JSON.stringify(scores));
     endScreen.classList.add("hide");
     startScreen.classList.remove("hide");
-    // sets initial input box back to empty for next player
     addInitials.value = "";
-    // sets score back to 0 for next player
+    // a new game can begin
     score = 0;
 });
